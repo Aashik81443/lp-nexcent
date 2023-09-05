@@ -1,0 +1,30 @@
+.marketing-card {
+    
+    max-width: 368px;
+}
+
+.card-description {
+    position: relative;
+    z-index: 5;
+    padding: 20px 15px;
+    max-width: 280px;
+    margin: 0 auto;
+    margin-top: -90px;
+    background-color: white;
+    color: #717171;
+    border-radius: 15px;
+    box-shadow: 0px 8px 16px 0px rgba(171, 190, 209, 0.40);
+}
+
+.card-description h4 {
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.card-description .btn-wrap {
+    text-align: center;
+}
+
+.media img {
+    width: 100%;
+}
