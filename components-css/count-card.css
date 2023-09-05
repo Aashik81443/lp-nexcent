@@ -1,0 +1,9 @@
+.count-card{
+    display: flex;
+}
+.count{
+    margin-left: 16px;
+}
+.count h3{
+    margin-bottom: 0px;
+}

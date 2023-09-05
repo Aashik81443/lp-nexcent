@@ -1,27 +1,29 @@
-.btn{
-    display:inline-block;
+.btn {
+    display: inline-block;
     font-size: 18px;
     font-weight: 400;
     line-height: 24px;
     padding: 14px 32px;
-    color:  #ffffff ;
+    color: #ffffff;
     border-radius: 4px;
     background-color: #000000;
 }
 
-a{
+a {
     text-decoration: none;
 }
-.btn-primary{
-    
+
+.btn-primary {
+
     background-color: #4CAF4F;
-    color:  #ffffff ;
+    color: #ffffff;
 }
-.btn-primary:hover{
+
+.btn-primary:hover {
     background-color: #4CAF4F;
 }
 
-.btn-secondary{
+.btn-secondary {
     font-weight: 600;
     font-size: 20px;
     line-height: 28px;
@@ -29,18 +31,19 @@ a{
 }
 
 
-.btn-secondary img{
+.btn-secondary img {
     height: 11px;
     width: 17px;
     margin-left: 5px;
 
 }
-.btn-primaryicon{
+
+.btn-primaryicon {
     background-color: #4CAF4F;
     color: #ffffff;
 }
 
-.btn-primaryicon img{
+.btn-primaryicon img {
     margin-left: 8px;
 }
 
