@@ -35,3 +35,12 @@ a{
     margin-left: 5px;
 
 }
+.btn-primaryicon{
+    background-color: #4CAF4F;
+    color: #ffffff;
+}
+
+.btn-primaryicon img{
+    margin-left: 8px;
+}
+
