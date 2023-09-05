@@ -58,7 +58,7 @@
             <div class="count-card">
                 <img src="images/user.png" alt="">
                 <div class="count">
-                    <h3 style>2,245,341</h3>
+                    <h3><div class="counter" id="counter"></div></h3>
                     <p>Members</p>
                 </div>
             </div>
@@ -139,6 +139,55 @@
             </div>
         </div>
     </footer>
+    <script>
+        let counting = false; // Flag to track if counting is already in progress
+        let count = 1; // Counter variable
+
+        // Function to count from 1 to 999 and display the current number in a div
+        function countNumbers() {
+            const counterDiv = document.getElementById("counter");
+            counterDiv.textContent = count;
+            count++;
+
+            // Stop counting when we reach 999 and reset the count and flag
+            if (count > 999) {
+                clearInterval(intervalId);
+                count = 1;
+                counting = false;
+            }
+        }
+
+        // Callback function to handle intersection changes
+        function handleIntersection(entries, observer) {
+            const counterDiv = document.getElementById("counter");
+            if (entries[0].isIntersecting) {
+                // Start counting only if it's not already counting
+                if (!counting) {
+                    counting = true;
+                    intervalId = setInterval(countNumbers, 1);
+                    counterDiv.style.visibility = "visible";
+                }
+            } else {
+                // Stop counting and reset when outside of viewport
+                clearInterval(intervalId);
+                counting = false;
+                counterDiv.style.visibility = "hidden";
+            }
+        }
+
+        // Create an Intersection Observer
+        const observer = new IntersectionObserver(handleIntersection, {
+            root: null, // Use the viewport as the root
+            rootMargin: "0px", // No margin
+            threshold: 0.1, // Trigger when at least 10% of the target is visible
+        });
+
+        // Observe the div with id "counter"
+        const counterDiv = document.getElementById("counter");
+        let intervalId;
+
+        observer.observe(counterDiv);
+    </script>
 </body>
 
 </html>
