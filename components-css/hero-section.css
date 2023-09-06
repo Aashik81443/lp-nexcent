@@ -1,10 +1,10 @@
 .hero-section{
     display: flex;
-    padding: 70px 0;
+    padding: 40px 0;
     gap: 104px;
 }
 .discription{
-    margin-top: 120px;
+    margin-top: 100px;
 }
 .hero-section .discription .hero-span{
     color: #4CAF4F;
@@ -14,7 +14,7 @@
     margin-top: 16px;
 }
 .illustration{
-    margin-top: 96px;
+    margin-top: 70px;
 }
 .hero-section .discription .btn-wrap{
     margin-top: 40px;
