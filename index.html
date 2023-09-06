@@ -45,7 +45,8 @@
                                 </div>
                                 <div class="info-card__content">
                                     <h3>Membership Organisations</h3>
-                                    <p>Our membership management software provides fill automation of membership renewals
+                                    <p>Our membership management software provides fill automation of membership
+                                        renewals
                                         and payments.
                                     </p>
                                 </div>
@@ -56,7 +57,8 @@
                                 </div>
                                 <div class="info-card__content">
                                     <h3>National Associations</h3>
-                                    <p>Our membership management software provides full automation of membership renewals
+                                    <p>Our membership management software provides full automation of membership
+                                        renewals
                                         and payments
                                     </p>
                                 </div>
@@ -67,7 +69,8 @@
                                 </div>
                                 <div class="info-card__content">
                                     <h3>Clubs And Groups</h3>
-                                    <p>Our membership management software provides full automation of membership renewals
+                                    <p>Our membership management software provides full automation of membership
+                                        renewals
                                         and payments.
                                     </p>
                                 </div>
@@ -96,9 +99,68 @@
                             </div>
                         </div>
                     </div>
-
                 </section>
             </div>
+            <section class="block-counter">
+                <div class="container">
+                    <div class="row">
+                        <div class="col1">
+                            <div class="description">
+                                <h3>Helping a local <br><span class="text-green">business reinvent itself</span></h3>
+                                <p>We reached here with our hard work and dedication</p>
+                            </div>
+                        </div>
+                        <div class="col2">
+                            <div class="counter-card">
+                                <div class="row">
+                                    <div class="count-card">
+                                        <img src="images/user.png" alt="">
+                                        <div class="count">
+                                            <h3>
+                                                <div class="counter" id="counter"></div>
+                                            </h3>
+                                            <p>Members</p>
+                                        </div>
+                                    </div>
+                                    <div class="count-card">
+                                        <img src="images/pam.svg" alt="">
+                                        <div class="count">
+                                            <h3>
+                                                <div class="counter" id="counter"></div>46,328
+                                            </h3>
+                                            <p>Clubs</p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="row">
+                                    <div class="count-card">
+                                        <img src="images/allien.svg" alt="">
+                                        <div class="count">
+                                            <h3>
+                                                <div class="counter" id="counter"></div>828,867
+                                            </h3>
+                                            <p>Event Bookings</p>
+                                        </div>
+                                    </div>
+                                    <div class="count-card">
+                                        <img src="images/card.svg" alt="">
+                                        <div class="count">
+                                            <h3>
+                                                <div class="counter" id="counter"></div>1,926,436
+                                            </h3>
+                                            <p>Payments</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </section>
         </main>
         <footer class="site-footer">
             <div class="container">
@@ -144,6 +206,55 @@
             </div>
         </footer>
     </div>
+    <script>
+        let counting = false; // Flag to track if counting is already in progress
+        let count = 1; // Counter variable
+
+        // Function to count from 1 to 999 and display the current number in a div
+        function countNumbers() {
+            const counterDiv = document.getElementById("counter");
+            counterDiv.textContent = count;
+            count++;
+
+            // Stop counting when we reach 999 and reset the count and flag
+            if (count > 999) {
+                clearInterval(intervalId);
+                count = 1;
+                counting = false;
+            }
+        }
+
+        // Callback function to handle intersection changes
+        function handleIntersection(entries, observer) {
+            const counterDiv = document.getElementById("counter");
+            if (entries[0].isIntersecting) {
+                // Start counting only if it's not already counting
+                if (!counting) {
+                    counting = true;
+                    intervalId = setInterval(countNumbers, 1);
+                    counterDiv.style.visibility = "visible";
+                }
+            } else {
+                // Stop counting and reset when outside of viewport
+                clearInterval(intervalId);
+                counting = false;
+                counterDiv.style.visibility = "hidden";
+            }
+        }
+
+        // Create an Intersection Observer
+        const observer = new IntersectionObserver(handleIntersection, {
+            root: null, // Use the viewport as the root
+            rootMargin: "0px", // No margin
+            threshold: 0.1, // Trigger when at least 10% of the target is visible
+        });
+
+        // Observe the div with id "counter"
+        const counterDiv = document.getElementById("counter");
+        let intervalId;
+
+        observer.observe(counterDiv);
+    </script>
 </body>
 
 </html>
