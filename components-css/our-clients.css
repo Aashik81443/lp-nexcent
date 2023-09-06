@@ -1,0 +1,52 @@
+.brand-logo h3,
+p {
+    text-align: center;
+}
+
+.brand-logo .row {
+    margin-top: 10px;
+    padding: 25px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.our-clients .client-description h3 {
+    max-width: 542px;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+
+.our-clients .client-description {
+    padding: 5px 0;
+}
+
+.info-card__wrap .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.bottom-section .row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.bottom-section .row .col1 {
+    width: 50%;
+}
+.bottom-section .row .col1 .media img{
+    width: 100%;
+    object-fit: cover;
+}
+
+.bottom-section .row .col2 {
+    width: 40%;
+}
+
+.bottom-section .row .col2 p{
+margin-bottom: 20px;
+}
