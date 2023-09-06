@@ -1,0 +1,32 @@
+.hero-section{
+    display: flex;
+    padding: 70px 0;
+    gap: 104px;
+}
+.discription{
+    margin-top: 120px;
+}
+.hero-section .discription .hero-span{
+    color: #4CAF4F;
+}
+.hero-section .discription p{
+    text-align: left;
+    margin-top: 16px;
+}
+.illustration{
+    margin-top: 96px;
+}
+.hero-section .discription .btn-wrap{
+    margin-top: 40px;
+}
+.hero{
+    background-color:#F5F7FA;
+}
+.hero-section-warp .ellipse-wrap{
+   
+   padding-bottom: 16px;
+   padding-left: 533px;
+}
+.hero-section-warp .ellipse-wrap img{
+    padding-right: 8px;
+}
