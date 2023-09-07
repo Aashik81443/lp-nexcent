@@ -1,10 +1,16 @@
-.brand-logo h3,
-p {
+.brand-logo h3,p {
     text-align: center;
+    
+}
+.brand-logo h3{
+    margin-top: 40px;
+}
+.brand-logo p{
+    margin-top: 8px;
 }
 
 .brand-logo .row {
-    margin-top: 10px;
+    margin-top: 16px;
     padding: 25px 0;
     display: flex;
     flex-wrap: wrap;
@@ -20,9 +26,11 @@ p {
 }
 
 .our-clients .client-description {
-    padding: 5px 0;
+    padding: 0 0;
 }
-
+.info-card__wrap{
+    padding-top: 16px;
+}
 .info-card__wrap .row {
     display: flex;
     flex-wrap: wrap;
