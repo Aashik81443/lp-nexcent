@@ -18,11 +18,3 @@
     flex-wrap: wrap;
     justify-content: space-around;
 }
-
-.blog-section .row .col3 .card-description {
-    height: 156px;
-}
-
-.blog-section .row .col3 .btn-wrap {
-    padding-top: 20px;
-}
