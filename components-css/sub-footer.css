@@ -1,0 +1,13 @@
+.sub-footer{
+    background-color: #F5F7FA;
+}
+.sub-footer .discription{
+    padding: 32px 0;
+}
+.sub-footer .discription h1{
+    text-align: center;
+}
+.sub-footer .btn-wrap{
+    padding-left: 487px;
+    padding-bottom: 32px;
+}
