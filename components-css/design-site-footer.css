@@ -1,0 +1,15 @@
+.design-site-footer{
+    padding: 48px 48px ;
+}
+.design-site-footer .content{
+    display: flex;
+    gap:58px ;
+}
+.design-site-footer .content p{
+    margin-top: 16px;
+    margin-bottom: 32px;
+    text-align: justify;
+}
+.design-site-footer .content .discription{
+    margin: 63px 0px;
+}
